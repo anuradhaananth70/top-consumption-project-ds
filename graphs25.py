@@ -67,7 +67,7 @@ else:
 
 # Add text to the left sidebar
 
-st.sidebar.header('Insights At A Glance')
+st.sidebar.header('💡Insights At A Glance')
 
 st.sidebar.markdown("""
     Majority users have a spike starting from April, and Aug - November highest usage
