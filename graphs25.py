@@ -212,18 +212,18 @@ st.sidebar.markdown("""
     </div>
   </div>
   <div style="width: 103.33%; padding: 10px;">
-      <p>- 💡The students usually study from tier 1 colleges</p>
-      <p>- 💡First years - 6am - 9 am and 2pm to 6 pm</p>
-      <p>- 💡Second years usually study from 7 am to 9 am and then 9 pm - 11 pm at night</p>
-      <p>- 💡Third years are found to have a similar pattern but the usage is more during late evening to night time.</p>
-      <p>- 💡The study session is for an average of 5 hours per day for most number of users</p>
+      <p>💡The students usually study from tier 1 colleges</p>
+      <p>💡First years - 6am - 9 am and 2pm to 6 pm</p>
+      <p>💡Second years usually study from 7 am to 9 am and then 9 pm - 11 pm at night</p>
+      <p>💡Third years are found to have a similar pattern but the usage is more during late evening to night time.</p>
+      <p>💡The study session is for an average of 5 hours per day for most number of users</p>
     </div>
   </div>
   <div style="width: 103.33%; padding: 10px;">
-      <p>- 💡When we talk about the engagement on other content on the app, the ratio for video watch and qbanks is 1:4. That is, for every 4 videos watched, 1 qbank is solved.</p>
-      <p>- 💡The time gap between creating an account and buying the plan is 1 year constant throughout majority users.</p>
-      <p>- 💡Higher videos does not always mean high qbank usage and notes usage.</p>
-      <p>- 💡Subjects which are highly watched are OBG, Medicine, ENT and E6.5 Revision Videos have a spike after July.</p>
+      <p>💡When we talk about the engagement on other content on the app, the ratio for video watch and qbanks is 1:4. That is, for every 4 videos watched, 1 qbank is solved.</p>
+      <p>💡The time gap between creating an account and buying the plan is 1 year constant throughout majority users.</p>
+      <p>💡Higher videos does not always mean high qbank usage and notes usage.</p>
+      <p>💡Subjects which are highly watched are OBG, Medicine, ENT and E6.5 Revision Videos have a spike after July.</p>
     </div>
   </div>
 </div>
@@ -291,7 +291,7 @@ st.table(df4)
 
 
 # Display the title as a markdown string
-st.markdown("### Questions Under Hypothesis Answered Below")
+st.markdown("### 📍 Questions Under Hypothesis Answered Below")
 
 import streamlit as st
 
@@ -340,7 +340,7 @@ import streamlit as st
 
 # Add text to the Streamlit app
 st.markdown("""
-### Conclusion
+### 💯 Conclusion
 
 Based on the analysis of the study patterns of the students, several key insights can be drawn:
 
