@@ -14,7 +14,7 @@ import plotly.express as px
 
 #title of the app
 # Add an image to the top left corner of the sidebar
-st.image("photos/Daily rounds logo.jpeg", width=100)  # Adjust the width as needed
+st.sidebar.image("photos/marrowlogo.png", width=100)  # Adjust the width as needed
 
 st.title('Top Consumption Analysis and YOA Analysis - Insights')
 # Add a header image
