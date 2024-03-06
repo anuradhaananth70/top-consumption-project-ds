@@ -31,7 +31,7 @@ st.markdown(
     """
     <style>
         body {
-            background-image: url('https://ibb.co/sjjchPk');
+            background-image: url('photos/white.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
         }
