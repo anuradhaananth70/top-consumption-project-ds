@@ -132,7 +132,10 @@ data5 = {
 df5 = pd.DataFrame(data5)
 
 # Content for Academic Years tab
-st.markdown(### '📒 Subject Watch Distribution - Year Wise')
+st.markdown(### <p>📒 Subject Watch Distribution - Year Wise</p>
+
+
+)
 
 # Create a dropdown menu to select academic year
 selected_year = st.selectbox('Select Academic Year', df5['Academic Year'])
