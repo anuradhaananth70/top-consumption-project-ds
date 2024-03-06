@@ -26,7 +26,19 @@ In YOA analysis, the observations are as follows:
 
 - The maximum usage comes from Doctors who are not students currently. First year student however are found to have video usage on almost all popular subjects like OBG, ENT, etc. and an ample about of QBanks.
 """)
-
+# Add a background image for the entire app
+st.markdown(
+    """
+    <style>
+        body {
+            background-image: url('https://ibb.co/sjjchPk');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Sample data
 year = ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor']
 video_counts = [1129, 1299, 1709, 1714, 2489, 1692, 2956]
