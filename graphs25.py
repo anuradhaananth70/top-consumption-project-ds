@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1j04VPqQ1Y2zeauM5YdyzEb8JnMlW6LB-
 """
 import streamlit as st
-
+import pandas as pd
 #title of the app
 # Add an image to the top left corner of the sidebar
 st.sidebar.image("photos/marrowlogo.png", width=150)  # Adjust the width as needed
