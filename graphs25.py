@@ -7,9 +7,40 @@ Original file is located at
     https://colab.research.google.com/drive/1j04VPqQ1Y2zeauM5YdyzEb8JnMlW6LB-
 """
 
-import streamlit as st
-import pandas as pd
-import plotly.express as px
+# Get the image as base64
+img_path = "photos/bannerbanner.png"
+img = st.image(img_path, use_column_width=True)
+
+# Set background image using custom CSS styling
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+    background-image: url("{img_path}");
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-attachment: local;
+}}
+
+[data-testid="stSidebar"] > div:first-child {{
+    background-image: url("{img_path}");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}}
+
+[data-testid="stHeader"] {{
+    background: rgba(0, 0, 0, 0);
+}}
+
+[data-testid="stToolbar"] {{
+    right: 2rem;
+}}
+</style>
+"""
+
+# Apply the custom styling
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 #title of the app
