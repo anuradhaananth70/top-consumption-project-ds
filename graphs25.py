@@ -217,31 +217,31 @@ st.sidebar.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-
-
-
+#pie chart
 import matplotlib.pyplot as plt
+import streamlit as st
 
 # Sample data
 labels = ['QBank Usage', 'Notes', 'Video Usage', 'Others']
 sizes = [14, 34, 42, 10]
-colors = ['#ff9999','#66b3ff','#99ff99','#ffcc99']
+colors = ['#8FB5A5', '#FFD5C2', '#A1C7C3', '#D7C4BB']  # Subdued colors
 
 # Create a pie chart with a smaller size
-fig1, ax1 = plt.subplots(figsize=(4, 4))
-ax1.pie(sizes, colors=colors, labels=labels, autopct='%1.1f%%', startangle=90)
+fig1, ax1 = plt.subplots(figsize=(3, 3))  # Adjust the size as needed
+ax1.pie(sizes, colors=colors, labels=labels, autopct='%1.1f%%', startangle=90, textprops={'fontsize': 8})
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 # Set the font size of the legend
-ax1.legend(labels, loc="center right", fontsize=3)
+ax1.legend(labels, loc="center right", fontsize=8)
 # Display the pie chart on the left side of the Streamlit app
 st.pyplot(fig1)
 
 # Add text to the right side of the Streamlit app
 st.markdown("""
 <div style="float: right; width: 50%;">
-  <p>The following statistics has been obtained by taking the average of the count of each unique event present in the API logs for each user. An average of all the user's data has been displayed here.</p>
+  <p>The following statistics have been obtained by taking the average of the count of each unique event present in the API logs for each user. An average of all the user's data has been displayed here.</p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 import streamlit as st
