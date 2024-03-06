@@ -209,7 +209,7 @@ def with_watermark(image_path, code_snippet_function):
         code_snippet_function()
 
 # Call the with_watermark function with your image and code snippet
-watermark_image_path = "photos/bannerbanner.png"  # Replace with the path to your watermark image
+watermark_image_path = "marrowbanner.jpeg"  # Replace with the path to your watermark image
 
 # Add text to the sidebar with watermark
 with_watermark(watermark_image_path, lambda: st.sidebar.markdown("""
