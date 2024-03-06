@@ -84,12 +84,6 @@ else:
 
 st.sidebar.header('💡Insights At A Glance')
 
-st.sidebar.markdown("""
-    Majority users have a spike starting from April, and Aug - November highest usage
-    Most of them are doctors
-    Heavy usage in the second half of the year
-    Extreme consistency maintained
-""")
 
 import streamlit as st
 import pandas as pd
