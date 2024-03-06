@@ -10,15 +10,15 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+# Add a header image
+header_image = "photos/bannermarrow.png"  # Replace with the path to your header image
+st.image(header_image, use_column_width=True)
 
 #title of the app
 # Add an image to the top left corner of the sidebar
 st.image("photos/Daily rounds logo.jpeg", width=100)  # Adjust the width as needed
 
 st.title('Top Consumption Analysis and YOA Analysis - Insights')
-# Add a header image
-header_image = "photos/bannermarrow.png"  # Replace with the path to your header image
-st.image(header_image, use_column_width=True)
 
 # Add text to the Streamlit app
 st.markdown("""
