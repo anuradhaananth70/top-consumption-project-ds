@@ -28,17 +28,18 @@ In YOA analysis, the observations are as follows:
 
 - The maximum usage comes from Doctors who are not students currently. First year student however are found to have video usage on almost all popular subjects like OBG, ENT, etc. and an ample about of QBanks.
 """)
-# Set the background color of the sidebar to light blue
+# Set the background color of the sidebar
 st.markdown(
     """
     <style>
-        .sidebar {
-            background-color: #87CEEB;  /* Light Blue */
-        }
+    .sidebar .sidebar-content {
+        background-color: #f0f0f0;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # Sample data
 year = ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor']
