@@ -8,6 +8,8 @@ Original file is located at
 """
 import streamlit as st
 import pandas as pd
+import plotly.express as px
+ 
 #title of the app
 # Add an image to the top left corner of the sidebar
 st.sidebar.image("photos/marrowlogo.png", width=150)  # Adjust the width as needed
