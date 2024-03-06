@@ -197,33 +197,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import streamlit as st
 
-import streamlit as st
-import base64
-
-# Function to encode image to base64
-def image_to_base64(image_path):
-    with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode("utf-8")
-
-# Function to add a watermark to a specific code snippet
-def with_watermark(image_path, code_snippet_function):
-    # Encode the image to base64
-    image_base64 = image_to_base64(image_path)
-
-    # Display the image as a watermark
-    st.markdown(
-        f'<img src="photos/bannerbanner.png;base64,{image_base64}" style="width:100%;">',
-        unsafe_allow_html=True
-    )
-
-    # Execute the code snippet within the watermark context
-    code_snippet_function()
-
-# Call the with_watermark function with your image and code snippet
-watermark_image_path = "your_watermark_image.png"  # Replace with the path to your watermark image
-
-# Add text to the sidebar with watermark
-with_watermark(watermark_image_path, lambda: st.sidebar.markdown("""
+# Add text to the sidebar
+st.sidebar.markdown("""
 <div style="display: flex; flex-wrap: wrap;">
   <div style="width: 103.33%; padding: 10px;">
       <p>Majority users have a spike starting from April, and Aug - November highest usage</p>
@@ -234,7 +209,22 @@ with_watermark(watermark_image_path, lambda: st.sidebar.markdown("""
     </div>
   </div>
   <div style="width: 103.33%; padding: 10px;">
-      <p>- The students usually study from tier 1 co
+      <p>- The students usually study from tier 1 colleges</p>
+      <p>- First years - 6am - 9 am and 2pm to 6 pm</p>
+      <p>- Second years usually study from 7 am to 9 am and then 9 pm - 11 pm at night</p>
+      <p>- Third years are found to have a similar pattern but the usage is more during late evening to night time.</p>
+      <p>- The study session is for an average of 5 hours per day for most number of users</p>
+    </div>
+  </div>
+  <div style="width: 103.33%; padding: 10px;">
+      <p>- When we talk about the engagement on other content on the app, the ratio for video watch and qbanks is 1:4. That is, for every 4 videos watched, 1 qbank is solved.</p>
+      <p>- The time gap between creating an account and buying the plan is 1 year constant throughout majority users.</p>
+      <p>- Higher videos does not always mean high qbank usage and notes usage.</p>
+      <p>- Subjects which are highly watched are OBG, Medicine, ENT and E6.5 Revision Videos have a spike after July.</p>
+    </div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
 
 
 
