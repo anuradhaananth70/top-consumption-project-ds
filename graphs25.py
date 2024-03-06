@@ -19,7 +19,7 @@ st.title('Top Consumption Analysis and YOA Analysis - Insights')
 header_image = "photos/bannermarrow.png"  # Replace with the path to your header image
 st.image(header_image, use_column_width=True)
 # Add text to the Streamlit app
-st.markdown("""
+st.title("""
 ### YOA Analysis
 
 In YOA analysis, the observations are as follows:
