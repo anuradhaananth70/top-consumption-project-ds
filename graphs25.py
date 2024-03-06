@@ -197,8 +197,22 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import streamlit as st
 
-# Add text to the sidebar
-st.sidebar.markdown("""
+# Import necessary libraries
+import streamlit as st
+
+# Function to add a watermark to a specific code snippet
+def with_watermark(image_path, code_snippet_function):
+    watermark = st.image(image_path, use_column_width=True)
+
+    # Execute the code snippet within the watermark context
+    with watermark:
+        code_snippet_function()
+
+# Call the with_watermark function with your image and code snippet
+watermark_image_path = "photos/bannerbanner.png"  # Replace with the path to your watermark image
+
+# Add text to the sidebar with watermark
+with_watermark(watermark_image_path, lambda: st.sidebar.markdown("""
 <div style="display: flex; flex-wrap: wrap;">
   <div style="width: 103.33%; padding: 10px;">
       <p>Majority users have a spike starting from April, and Aug - November highest usage</p>
@@ -210,7 +224,7 @@ st.sidebar.markdown("""
   </div>
   <div style="width: 103.33%; padding: 10px;">
       <p>- The students usually study from tier 1 colleges</p>
-      <p>- First years - 6am - 9 am and 2pm to 6 pm</p>
+      <p>- First years - 6 am - 9 am and 2 pm to 6 pm</p>
       <p>- Second years usually study from 7 am to 9 am and then 9 pm - 11 pm at night</p>
       <p>- Third years are found to have a similar pattern but the usage is more during late evening to night time.</p>
       <p>- The study session is for an average of 5 hours per day for most number of users</p>
@@ -224,7 +238,8 @@ st.sidebar.markdown("""
     </div>
   </div>
 </div>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True))
+
 
 
 
