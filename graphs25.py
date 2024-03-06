@@ -28,6 +28,32 @@ In YOA analysis, the observations are as follows:
 
 - The maximum usage comes from Doctors who are not students currently. First year student however are found to have video usage on almost all popular subjects like OBG, ENT, etc. and an ample about of QBanks.
 """)
+import streamlit as st
+
+# Set the background color of the sidebar (from light blue to dark blue)
+st.markdown(
+    """
+    <style>
+        .sidebar {
+            background: linear-gradient(to bottom, #87CEEB, #000080);
+            color: yellow;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Add text to the sidebar
+st.sidebar.markdown("""
+    <div style="padding: 10px;">
+        <h1 style="color: white;">Streamlit Sidebar</h1>
+        <p>This is an example of an ombre sidebar.</p>
+    </div>
+""", unsafe_allow_html=True)
+
+# Your main content goes here
+st.title("Streamlit App Content")
+st.write("This is the main content of your Streamlit app.")
 
 
 # Sample data
