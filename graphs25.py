@@ -253,6 +253,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+import streamlit as st
+import pandas as pd
+
 # Sample data
 data4 = {
     'Subject Name': ['Anaesthesia', 'Anatomy', 'Biochemistry', 'Cardiology', 'Community Medicine', 'COVID-19 Updates', 'Delta MCQ Discussion', 'Delta Recent Updates', 'Delta: MCQ Discussion videos', 'Dermatology', 'E6 MCQ Discussion', 'E6 Revision Videos', 'E6.5 Revision Videos', 'Endocrinology', 'ENT', 'Forensic Medicine', 'Gastroenterology', 'Gastrointestinal System', 'Haematology', 'Integrated Sessions', 'Marrow Live +', 'Marrow Revision Videos', 'Medicine', 'Microbiology', 'Nephrology', 'Neurology', 'Obstetrics & Gynaecology', 'Ophthalmology', 'Orthopaedics', 'Paediatrics', 'Pathology', 'Pharmacology', 'Physiology', 'Psychiatry', 'Pulmonology', 'Radiology', 'Rheumatology & Immunology', 'Surgery'],
@@ -262,11 +265,26 @@ data4 = {
 # Create a DataFrame
 df4 = pd.DataFrame(data4)
 
+# Set a background image
+background_image_path = "photos/bannerbanner.png"
+st.markdown(
+    f"""
+    <style>
+        .reportview-container {{
+            background: url({background_image_path}) no-repeat center center fixed;
+            background-size: cover;
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Display the title as a markdown string
 st.markdown("### Average time taken by a student to finish a subject from a pool of high consumption users")
 
 # Display the DataFrame as a table
 st.table(df4)
+
 
 
 # Display the title as a markdown string
