@@ -67,7 +67,7 @@ else:
 
 # Add text to the left sidebar
 # Add an image to the top left corner of the sidebar
-st.sidebar.image("dailyroundslogo.png", use_column_width=True)
+st.sidebar.image("photos/Daily rounds logo.jpeg", use_column_width=True)
 
 st.sidebar.header('💡Insights At A Glance')
 
