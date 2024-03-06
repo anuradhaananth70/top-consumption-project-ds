@@ -20,24 +20,12 @@ header_image = "photos/bannermarrow.png"  # Replace with the path to your header
 st.image(header_image, use_column_width=True)
 # Add text to the Streamlit app
 st.title("""
-### YOA Analysis
+ YOA Analysis
 
 In YOA analysis, the observations are as follows:
 
 - The maximum usage comes from Doctors who are not students currently. First year student however are found to have video usage on almost all popular subjects like OBG, ENT, etc. and an ample about of QBanks.
 """)
-# Set the background color of the sidebar
-st.markdown(
-    """
-    <style>
-    .sidebar .sidebar-content {
-        background-color: #ADD8E6;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 
 # Sample data
 year = ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor']
@@ -144,7 +132,7 @@ data5 = {
 df5 = pd.DataFrame(data5)
 
 # Content for Academic Years tab
-st.title('📒 Subject Watch Distribution - Year Wise')
+st.markdown('📒 Subject Watch Distribution - Year Wise')
 
 # Create a dropdown menu to select academic year
 selected_year = st.selectbox('Select Academic Year', df5['Academic Year'])
