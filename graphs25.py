@@ -266,7 +266,7 @@ data4 = {
 df4 = pd.DataFrame(data4)
 
 # Set a background image
-background_image_path = "photos/bannerbanner.png"
+background_image_path = "photos/marrowlogo.png"
 st.markdown(
     f"""
     <style>
