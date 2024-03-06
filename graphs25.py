@@ -227,11 +227,11 @@ sizes = [14, 34, 42, 10]
 colors = ['#8FB5A5', '#FFD5C2', '#A1C7C3', '#D7C4BB']  # Subdued colors
 
 # Create a pie chart with a smaller size
-fig1, ax1 = plt.subplots(figsize=(2, 2))  # Adjust the size as needed
-ax1.pie(sizes, colors=colors, labels=labels, autopct='%1.1f%%', startangle=90, textprops={'fontsize': 4})
+fig1, ax1 = plt.subplots(figsize=(1, 1))  # Adjust the size as needed
+ax1.pie(sizes, colors=colors, labels=labels, autopct='%1.1f%%', startangle=90, textprops={'fontsize': 2})
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 # Set the font size of the legend
-ax1.legend(labels, loc="center right", fontsize=8)
+ax1.legend(labels, loc="center right", fontsize=2)
 # Display the pie chart on the left side of the Streamlit app
 st.pyplot(fig1)
 
