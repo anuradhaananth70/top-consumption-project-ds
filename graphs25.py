@@ -252,22 +252,38 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+# Import the Streamlit library
+import streamlit as st
 import pandas as pd
 
-# Sample data
-data4 = {
-    'Subject Name': ['Anaesthesia', 'Anatomy', 'Biochemistry', 'Cardiology', 'Community Medicine', 'COVID-19 Updates', 'Delta MCQ Discussion', 'Delta Recent Updates', 'Delta: MCQ Discussion videos', 'Dermatology', 'E6 MCQ Discussion', 'E6 Revision Videos', 'E6.5 Revision Videos', 'Endocrinology', 'ENT', 'Forensic Medicine', 'Gastroenterology', 'Gastrointestinal System', 'Haematology', 'Integrated Sessions', 'Marrow Live +', 'Marrow Revision Videos', 'Medicine', 'Microbiology', 'Nephrology', 'Neurology', 'Obstetrics & Gynaecology', 'Ophthalmology', 'Orthopaedics', 'Paediatrics', 'Pathology', 'Pharmacology', 'Physiology', 'Psychiatry', 'Pulmonology', 'Radiology', 'Rheumatology & Immunology', 'Surgery'],
-    'Average Time Taken to Finish the Subject': [21.5, 71.1, 45.9, 16.2, 78.6, 5, 19, 7.6, 8.6, 22.7, 20.8, 32.3, 65.5, 14.8, 46.8, 27.0, 10.75, 1, 13.5, 2, 1, 27.6, 166.9, 57.7, 15.5, 8, 79.5, 29.4, 20.8, 42.0, 56.1, 56.2, 45.2, 13.48, 14.5, 29.9375, 9.875, 58.0]
-}
+# Function to add a watermark to a specific code snippet
+def with_watermark(image_path, code_snippet_function):
+    watermark = st.image(image_path, use_column_width=True)
 
-# Create a DataFrame
-df4 = pd.DataFrame(data4)
+    # Execute the code snippet within the watermark context
+    with watermark:
+        code_snippet_function()
 
-# Display the title as a markdown string
-st.markdown("### Average time taken by a student to finish a subject from a pool of high consumption users")
+# Replace this function with your specific code snippet
+def display_data_table():
+    # Sample data
+    data4 = {
+        'Subject Name': ['Anaesthesia', 'Anatomy', 'Biochemistry', 'Cardiology', 'Community Medicine', 'COVID-19 Updates', 'Delta MCQ Discussion', 'Delta Recent Updates', 'Delta: MCQ Discussion videos', 'Dermatology', 'E6 MCQ Discussion', 'E6 Revision Videos', 'E6.5 Revision Videos', 'Endocrinology', 'ENT', 'Forensic Medicine', 'Gastroenterology', 'Gastrointestinal System', 'Haematology', 'Integrated Sessions', 'Marrow Live +', 'Marrow Revision Videos', 'Medicine', 'Microbiology', 'Nephrology', 'Neurology', 'Obstetrics & Gynaecology', 'Ophthalmology', 'Orthopaedics', 'Paediatrics', 'Pathology', 'Pharmacology', 'Physiology', 'Psychiatry', 'Pulmonology', 'Radiology', 'Rheumatology & Immunology', 'Surgery'],
+        'Average Time Taken to Finish the Subject': [21.5, 71.1, 45.9, 16.2, 78.6, 5, 19, 7.6, 8.6, 22.7, 20.8, 32.3, 65.5, 14.8, 46.8, 27.0, 10.75, 1, 13.5, 2, 1, 27.6, 166.9, 57.7, 15.5, 8, 79.5, 29.4, 20.8, 42.0, 56.1, 56.2, 45.2, 13.48, 14.5, 29.9375, 9.875, 58.0]
+    }
 
-# Display the DataFrame as a table
-st.table(df4)
+    # Create a DataFrame
+    df4 = pd.DataFrame(data4)
+
+    # Display the title as a markdown string
+    st.markdown("### Average time taken by a student to finish a subject from a pool of high consumption users")
+
+    # Display the DataFrame as a table
+    st.table(df4)
+
+# Call the with_watermark function with your image and code snippet
+watermark_image_path = "photos/bannerbanner.png"  # Replace with the path to your watermark image
+with_watermark(watermark_image_path, display_data_table)
 
 
 # Display the title as a markdown string
