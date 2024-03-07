@@ -22,7 +22,8 @@ st.image(header_image, use_column_width=True)
 st.title("""
  YOA Analysis
 
-In YOA analysis, the observations are as follows:
+The objective of this report is to understand the pattern of study, segregated on the basis of their year of admission. So our pool of users 
+are from first year of MBBS till they graduate to become a Doctor. In YOA analysis, the observations are as follows:
 
 - The maximum usage comes from Doctors who are not students currently. First year student however are found to have video usage on almost all popular subjects like OBG, ENT, etc. and an ample about of QBanks.
 """)
@@ -53,7 +54,8 @@ df = pd.DataFrame(data)
 df_sorted = df.sort_values(by='YOA')
 
 # Plot a bar chart
-fig = px.line(df_sorted, x='YOA', y='Video Count', title='📊 Distinct Count of Video Titles by YOA')
+fig = px.line(df_sorted, x='YOA', y='Video Count')
+st.title('📊 Distinct Count of Video Titles by YOA')
 st.plotly_chart(fig)
 
 # List of subject titles
