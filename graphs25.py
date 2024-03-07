@@ -118,9 +118,10 @@ average_completion_time = {
     'Psychiatry' : 13.48,
     'Surgery' : 58
 }
-
+st.markdown('--------------------------------------------')
 # Create a dropdown menu
-selected_subject = st.selectbox('Select a Subject To Check For Average Pace of Completion', subject_titles)
+st.title('Select a Subject To Check For Average Pace of Completion')
+selected_subject = st.selectbox('Select a Subject', subject_titles)
 
 # Display the selected subject
 st.write('You selected:', selected_subject)
