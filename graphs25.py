@@ -66,7 +66,7 @@ average_completion_time = {
     'Dermatology': 30,
     'Psychiatry': 25,
     'Microbiology': 35,
-    'Biochemistry': 40
+    'Biochemistry': 40,
      'Anaesthesia' : 21.5,
 'Anatomy' : 71.1,
 'Biochemistry' : 45.9,
