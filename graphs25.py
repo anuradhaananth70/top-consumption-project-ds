@@ -242,6 +242,8 @@ df = pd.DataFrame(data)
 df_sorted = df.sort_values(by='Month')
 
 # Plot a bar chart
+st.title('📊 Distinct Count of Video Titles by YOA')
+st.markdown('The average pause per user is found to be 13.13 and the average is found to be 15.3')
 fig = px.bar(df_sorted, x='Month', y='Video Count', title='Distinct Count of Video Titles by Month')
 st.plotly_chart(fig)
 
@@ -260,6 +262,7 @@ st.sidebar.markdown("""
       <p>💡Heavy usage in the second half of the year</p>
       <p>💡Extreme consistency maintained</p>
       <p>💡45% out of 120 users have appeared in our top consumption list and further marked for an OTP_NV, but are not extremely suspicious. </p>
+      <p>📱 70% of the users use one single device for videos and QBanks consumption. 20% use tablet for videos and laptops for taking tests. 10% only use mobiles for videos.</p>
     </div>
   </div>
   <div style="width: 103.33%; padding: 10px;">
