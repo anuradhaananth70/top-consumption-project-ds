@@ -145,8 +145,8 @@ import plotly.express as px
 data = {
     'Academic Year': ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor'],
     'Morning Study Start Time': [6, 7, 6, 11, 8, 9, 11],  # Assuming placeholders for other years
-    'Morning Study End Time': [9, 11, 9, 12, 11, 11, 3],  # Assuming placeholders for other years
-    'Evening Study Start Time': [18, 8, 19, 19, 18, 17, 16],  # Assuming placeholders for other years
+    'Morning Study End Time': [9, 11, 9, 12, 11, 11, 13],  # Assuming placeholders for other years
+    'Evening Study Start Time': [18, 18, 19, 19, 18, 17, 16],  # Assuming placeholders for other years
     'Evening Study End Time': [22, 23, 23, 24, 23, 24, 19],  # Assuming placeholders for other years
 }
 
