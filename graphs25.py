@@ -183,10 +183,10 @@ data5 = {
     'Academic Year': ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor'],
     'Anatomy': [16, 17, 6, 11, 48, 9, 151],  # Assuming placeholders for other years
     'Biochemistry': [19, 17, 9, 112, 141, 121, 353],  # Assuming placeholders for other years
-    'OBG': [18, 8, 19, 30, 158, 127, 169],  # Assuming placeholders for other years
-    'ENT': [22, 12, 23, 36, 213, 244, 519],  # Assuming placeholders for other years
-    'Medicine': [15, 7, 23, 243, 123, 624, 419],  # Assuming placeholders for other years
-    'Surgery': [12, 5, 23, 143, 243, 724, 419],  # Assuming placeholders for other years
+    'OBG': [8, 8, 19, 30, 158, 127, 169],  # Assuming placeholders for other years
+    'ENT': [6, 12, 23, 36, 213, 244, 519],  # Assuming placeholders for other years
+    'Medicine': [5, 7, 23, 243, 123, 624, 419],  # Assuming placeholders for other years
+    'Surgery': [2, 5, 23, 143, 243, 724, 419],  # Assuming placeholders for other years
     'E6.5 Revision Videos': [2, 2, 23, 124, 623, 264, 169],  # Assuming placeholders for other years
 }
 
