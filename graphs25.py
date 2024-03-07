@@ -154,7 +154,7 @@ df = pd.DataFrame(data)
 
 # Content for Academic Years tab
 st.title('🩺 Academic Years')
-selected_year = st.radio('Select Academic Year', df['Academic Year'])
+selected_year = st.radio('Select Academic Year to see what time of the day do users study the most', df['Academic Year'])
 
 # Filter data based on selected academic year
 selected_row = df[df['Academic Year'] == selected_year].reset_index()
@@ -180,13 +180,13 @@ st.plotly_chart(fig)
 # Updated sample data to include specific times for First Year
 data5 = {
     'Academic Year': ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor'],
-    'Anatomy': [16, 17, 6, 11, 348, 9, 151],  # Assuming placeholders for other years
-    'Biochemistry': [19, 11, 9, 212, 141, 121, 353],  # Assuming placeholders for other years
-    'OBG': [18, 8, 19, 19, 158, 127, 169],  # Assuming placeholders for other years
-    'ENT': [22, 12, 23, 24, 213, 244, 519],  # Assuming placeholders for other years
-    'Medicine': [15, 17, 23, 24, 123, 624, 419],  # Assuming placeholders for other years
-    'Surgery': [12, 23, 23, 24, 243, 724, 419],  # Assuming placeholders for other years
-    'E6.5 Revision Videos': [2, 23, 23, 24, 623, 264, 169],  # Assuming placeholders for other years
+    'Anatomy': [16, 17, 6, 11, 48, 9, 151],  # Assuming placeholders for other years
+    'Biochemistry': [19, 17, 9, 112, 141, 121, 353],  # Assuming placeholders for other years
+    'OBG': [18, 8, 19, 30, 158, 127, 169],  # Assuming placeholders for other years
+    'ENT': [22, 12, 23, 36, 213, 244, 519],  # Assuming placeholders for other years
+    'Medicine': [15, 7, 23, 243, 123, 624, 419],  # Assuming placeholders for other years
+    'Surgery': [12, 5, 23, 143, 243, 724, 419],  # Assuming placeholders for other years
+    'E6.5 Revision Videos': [2, 2, 23, 124, 623, 264, 169],  # Assuming placeholders for other years
 }
 
 #subject distribution year-wise
@@ -198,7 +198,7 @@ df5 = pd.DataFrame(data5)
 st.title('📒 Subject Watch Distribution - Year Wise')
 
 # Create a dropdown menu to select academic year
-selected_year = st.selectbox('Select Academic Year', df5['Academic Year'])
+selected_year = st.selectbox('Select Academic Year to check the subject wise distribution of users', df5['Academic Year'])
 
 # Filter data based on selected academic year
 selected_row = df5[df5['Academic Year'] == selected_year].reset_index()
@@ -409,6 +409,16 @@ Based on the analysis of the study patterns of the students, several key insight
 6. **Usage Patterns**: The data suggests that students tend to consume videos and solve QBank questions in a ratio of 1:4, indicating a preference for video-based learning followed by practice questions.
 
 7. **Consistency**: Despite variations in study duration and subject popularity, there is a consistent pattern of usage among students, with heavy usage in the second half of the year and a consistent daily study duration of around 5 hours.
+
+**Insights from a product perspective**:
+1. Any new release of a video notification, QBanks alerts, etc. can be done in the month of August. 
+
+2. The year-wise distribution of subjects tells us that first and second years focus more on Anatomy, Biochemistry, etc whereas fourth year students are seen to have lesser usage compared to all other years.
+
+**Insights from a security perspective**:
+
+ The total number of titles can help us understand in what pace the user is completing the subjects. When we include the average seek and pause, we get a clear picture of how the videos are being used. The second step would be to check if the user is present in our daily monitoring list, if yes, then we can mark the user for suspicion.
+
 
 In conclusion, the study pattern analysis of the students reveals a consistent trend of heavy usage during specific periods of the year, a preference for certain subjects, and a balanced approach to learning through videos and QBanks.
 """)
