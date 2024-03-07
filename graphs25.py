@@ -56,6 +56,7 @@ df_sorted = df.sort_values(by='YOA')
 # Plot a bar chart
 fig = px.line(df_sorted, x='YOA', y='Video Count')
 st.title('📊 Distinct Count of Video Titles by YOA')
+st.markdown(' This graph represents the total number of videos watched by users, distributed year-wise. ')
 st.plotly_chart(fig)
 
 # List of subject titles
@@ -413,12 +414,14 @@ Based on the analysis of the study patterns of the students, several key insight
 
 7. **Consistency**: Despite variations in study duration and subject popularity, there is a consistent pattern of usage among students, with heavy usage in the second half of the year and a consistent daily study duration of around 5 hours.
 
-**👨🏻‍⚕️ Insights from a product perspective**:
+#### **👨🏻‍⚕️ Insights from a product perspective**:
 1. Any new release of a video notification, QBanks alerts, etc. can be done in the month of August. 
 
 2. The year-wise distribution of subjects tells us that first and second years focus more on Anatomy, Biochemistry, etc whereas fourth year students are seen to have lesser usage compared to all other years.
 
-**♟️ Insights from a security perspective**:
+3. Fourth year and internship students need to be more focused on.
+
+#### **♟️ Insights from a security perspective**:
 
  The total number of titles can help us understand in what pace the user is completing the subjects. When we include the average seek and pause, we get a clear picture of how the videos are being used. The second step would be to check if the user is present in our daily monitoring list, if yes, then we can mark the user for suspicion.
 
