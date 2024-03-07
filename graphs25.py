@@ -59,7 +59,25 @@ st.title('📊 Distinct Count of Video Titles by YOA')
 st.plotly_chart(fig)
 
 # List of subject titles
-subject_titles = ['Dermatology', 'Psychiatry', 'Microbiology', 'Biochemistry']
+subject_titles = ['Dermatology', 'Psychiatry', 'Microbiology', 'Biochemistry', 'Anaesthesia',
+'Anatomy',
+'Biochemistry',
+'Cardiology',
+'Community Medicine',
+'COVID-19 Updates',
+'Delta MCQ Discussion',
+'Delta Recent Updates',
+'Delta: MCQ Discussion videos',
+'Dermatology',
+'E6 MCQ Discussion',
+'E6 Revision Videos',
+'E6.5 Revision Videos',
+'Endocrinology',
+'ENT',
+'Marrow Revision Videos',
+'Medicine',
+'Microbiology',
+'Surgery']
 
 # Dictionary mapping subjects to average completion time
 average_completion_time = {
