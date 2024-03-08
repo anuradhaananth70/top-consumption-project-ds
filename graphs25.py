@@ -26,10 +26,8 @@ The objective of this report is to understand the pattern of study, segregated o
 are from first year of MBBS till they graduate to become a Doctor. In YOA analysis, the observations are as follows:
 
 - The maximum usage comes from Doctors who are not students currently. First year student however are found to have video usage on almost all popular subjects like OBG, ENT, etc. and an ample about of QBanks.
-
-st.markdown('The insights are mentioned as follows:')
-
 """)
+st.markdown(""" The insights are mentioned as follows: """)
 
 # Sample data
 year = ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor']
