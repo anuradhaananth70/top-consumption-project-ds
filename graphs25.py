@@ -427,8 +427,9 @@ Based on the analysis of the study patterns of the students, several key insight
 #### **♟️ Insights from a security perspective**:
 
  The total number of titles can help us understand in what pace the user is completing the subjects. When we include the average seek and pause, we get a clear picture of how the videos are being used. The second step would be to check if the user is present in our daily monitoring list, if yes, then we can mark the user for suspicion.
- One of the users from the top consumption is also found in our suspicious users list. We were able to confirm that this particular dashboard is being 
- effective because the user had completed an entire subject in a very less time span. For example, when we checked for 'Surgery', the user is found to have completed '71' videos in a span of 8 days. Which is abnormal and highly suspicious.  
+ One of the users from the top consumption is also found in our suspicious users list. 
+ 
+ **Insight:** We were able to confirm that this particular dashboard is being effective because the user had completed an entire subject in a very less time span. For example, when we checked for 'Surgery', the user is found to have completed '71' videos in a span of 8 days. Which is abnormal and highly suspicious.  
 
 
 In conclusion, the study pattern analysis of the students reveals a consistent trend of heavy usage during specific periods of the year, a preference for certain subjects, and a balanced approach to learning through videos and QBanks.
