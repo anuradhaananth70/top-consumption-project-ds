@@ -429,6 +429,9 @@ Based on the analysis of the study patterns of the students, several key insight
  **Insight:** The total number of titles can help us understand in what pace the user is completing the subjects. When we include the average seek and pause, we get a clear picture of how the videos are being used. The second step would be to check if the user is present in our daily monitoring list, if yes, then we can mark the user for suspicion.
  One of the users from the top consumption is also found in our suspicious users list. 
  
+# For local images
+st.image('photos/insight.png')
+ 
  We were able to confirm that this particular dashboard/report is being effective because the user had completed an entire subject in a very less time span. For example, when we checked for 'Surgery', the user is found to have completed '71' videos in a span of 8 days. Which is abnormal and highly suspicious.  
 
 
