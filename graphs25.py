@@ -14,7 +14,7 @@ import plotly.express as px
 # Add an image to the top left corner of the sidebar
 st.sidebar.image("photos/marrowlogo.png", width=150)  # Adjust the width as needed
 
-st.title('Top Consumption Analysis and YOA Analysis - Insights')
+st.title('Top Consumption Analysis and YOA Analysis')
 # Add a header image
 header_image = "photos/bannermarrow.png"  # Replace with the path to your header image
 st.image(header_image, use_column_width=True)
