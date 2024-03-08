@@ -399,7 +399,7 @@ import streamlit as st
 
 # Add text to the Streamlit app
 st.markdown("""
-### 💯 Conclusion
+### 🗝️ Key Takeaways
 
 Based on the analysis of the study patterns of the students, several key insights can be drawn:
 
@@ -435,4 +435,22 @@ st.image('photos/insight.png', width = 400)
 
 st.markdown("""
 In conclusion, the study pattern analysis of the students reveals a consistent trend of heavy usage during specific periods of the year, a preference for certain subjects, and a balanced approach to learning through videos and QBanks.
+""")
+
+st.markdown(""" 
+## 🎬 Action Points From A Product Perspective
+
+- A time slot of post 7 PM can be considered for sending out push notifications as most amount of users are active post 7 PM.
+
+- An in-app timetable can be made to suggest students what is the best way to go through the lessons. This will also help us track their usage better. This can be designed by doctors or toppers.
+
+- For a new content release, or a product release, the time span of August to November can be considered the best.
+
+
+## 🔓 Action Points From A Security Perspective
+
+- The dashbaord which shows the time taken for a user to finish a subject should be included into our daily monitoring procedure. If the number of completion days is far less than the average, then it can be marked as abnormal behaviour.
+
+- Also, from now on we can note down the year of study of each user and see if he is watching the subjects relavant to his syllabus. There will be outliers, but we need to focus on the majority of subjects consumed.
+
 """)
