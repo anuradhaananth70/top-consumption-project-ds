@@ -264,7 +264,7 @@ df_sorted = df.sort_values(by='Month')
 
 # Plot a bar chart
 st.title('📊 Distinct Count of Video Titles by YOA')
-st.markdown('The average pause per user is found to be 13.13 and the average is found to be 15.3')
+st.markdown('***The average pause per user is found to be 13.13 and the average seek is found to be 15.3***')
 fig = px.bar(df_sorted, x='Month', y='Video Count', title='Distinct Count of Video Titles by Month')
 st.plotly_chart(fig)
 
