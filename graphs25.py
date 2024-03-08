@@ -20,33 +20,16 @@ header_image = "photos/bannermarrow.png"  # Replace with the path to your header
 st.image(header_image, use_column_width=True)
 # Add text to the Streamlit app
 st.title("""
- YOA Analysis
+ Year Of Admission Analysis
 
 The objective of this report is to understand the pattern of study, segregated on the basis of their year of admission. So our pool of users 
 are from first year of MBBS till they graduate to become a Doctor. In YOA analysis, the observations are as follows:
 
 - The maximum usage comes from Doctors who are not students currently. First year student however are found to have video usage on almost all popular subjects like OBG, ENT, etc. and an ample about of QBanks.
+
+st.markdown('The insights are mentioned as follows:')
+
 """)
-
-
-# Function to set a background image
-def add_bg_image():
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("photos/white.jpeg");
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-# Call the function to set the background image
-add_bg_image()
-
-
 
 # Sample data
 year = ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor']
@@ -64,7 +47,16 @@ df_sorted = df.sort_values(by='YOA')
 # Plot a bar chart
 fig = px.line(df_sorted, x='YOA', y='Video Count')
 st.title('📊 Distinct Count of Video Titles by YOA')
-st.markdown(' This graph represents the total number of videos watched by users, distributed year-wise. ')
+st.markdown(' This graph represents the total number of videos watched by users, distributed year-wise. 
+- First Year Students: Total of 1129 videos watched.
+- Second Year Students: Total of 1299 videos watched. 
+- Third year students: Total of 1709 videos watched.
+- Fourth year students: Total of 1714 videos watched.
+- Final year students: Total of 2489 videos watched.
+- Internship students: Total of 1692 videos watched. 
+- Doctors: Total of 2956 videos watched.    ')
+
+            
 st.plotly_chart(fig)
 
 # List of subject titles
