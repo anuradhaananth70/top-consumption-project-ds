@@ -141,7 +141,7 @@ st.title('🩺 Academic Years')
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
+st.markdown(""" The below graph shows the time of the day users are most active. Along with the average hours spent watching videos.""")
 # Generate a detailed dataset based on the provided study/watch patterns
 def generate_detailed_data():
     # Data structure: [ (start_hour, end_hour, [minutes_watched_per_hour]), ... ]
@@ -206,6 +206,7 @@ df5 = pd.DataFrame(data5)
 
 # Content for Academic Years tab
 st.title('📒 Subject Watch Distribution - Year Wise')
+st.markdown(""" The below graph shows the distribution of subjects per year of study. """)
 
 # Create a dropdown menu to select academic year
 selected_year = st.selectbox('Select Academic Year to check the subject wise distribution of users', df5['Academic Year'])
