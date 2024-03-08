@@ -141,51 +141,62 @@ if selected_subject in average_completion_time:
 else:
     st.write('Average Completion Time: N/A')
 
+st.markdown('--------------------------------------------------------------')
+
 # Add text to the left sidebar
 
 st.sidebar.header('💡Insights At A Glance')
 
 
+st.title('🩺 Academic Years')
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# Updated sample data to include specific times for First Year
-data = {
-    'Academic Year': ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor'],
-    'Morning Study Start Time': [6, 7, 6, 11, 8, 9, 11],  # Assuming placeholders for other years
-    'Morning Study End Time': [9, 11, 9, 12, 11, 11, 13],  # Assuming placeholders for other years
-    'Evening Study Start Time': [18, 18, 19, 19, 18, 17, 16],  # Assuming placeholders for other years
-    'Evening Study End Time': [22, 23, 23, 24, 23, 24, 19],  # Assuming placeholders for other years
-}
+# Generate a detailed dataset based on the provided study/watch patterns
+def generate_detailed_data():
+    # Data structure: [ (start_hour, end_hour, [minutes_watched_per_hour]), ... ]
+    study_patterns = {
+        'First Year': [(8, 9, [45]), (19, 22, [32, 45, 54])],
+        'Second Year': [(9, 11, [33]), (18, 23, [53, 45, 60, 112])],
+        'Third Year': [(15, 16, [44]), (20, 24, [23, 45, 63, 62])],
+        'Fourth Year': [(13, 14, [30]), (18, 21, [34])],
+        'Final Year': [(15, 17, [60]), (20, 27, [36, 45])],  # Note: 24-27 maps to 0-3am
+        'Internship': [(13, 14, [30]), (19, 27, [70, 35, 45])],  # 7pm to 3am
+        'Doctor': [(8, 10, [19, 23, 45]), (18, 22, [45, 34, 67])]
+    }
+    data = []
+    for year, sessions in study_patterns.items():
+        for start_hour, end_hour, minutes_list in sessions:
+            for hour, minutes in zip(range(start_hour, end_hour), minutes_list):
+                # Normalize hours to 24-hour format
+                normalized_hour = hour if hour < 24 else hour - 24
+                data.append({'Hour': normalized_hour, 'MinutesWatched': minutes, 'YearOfStudy': year})
+    return pd.DataFrame(data)
 
-# Create a DataFrame
-df = pd.DataFrame(data)
+data = generate_detailed_data()
 
-# Content for Academic Years tab
-st.title('🩺 Academic Years')
-selected_year = st.radio('Select Academic Year to see what time of the day do users study the most', df['Academic Year'])
+# Sidebar - Year of study selection
+year_of_study = st.selectbox(
+    "Select the Year of Study",
+    options=["All"] + sorted(data['YearOfStudy'].unique()),
+    index=0  # Default selection is "All"
+)
 
-# Filter data based on selected academic year
-selected_row = df[df['Academic Year'] == selected_year].reset_index()
+# Filter data based on the year of study selection
+if year_of_study != "All":
+    filtered_data = data[data['YearOfStudy'] == year_of_study]
+else:
+    filtered_data = data
 
-# Prepare data for plotting
-plot_data = pd.DataFrame({
-    'Event': ['Morning Study Start', 'Morning Study End', 'Evening Study Start', 'Evening Study End'],
-    'Hour': [
-        selected_row.loc[0, 'Morning Study Start Time'],
-        selected_row.loc[0, 'Morning Study End Time'],
-        selected_row.loc[0, 'Evening Study Start Time'],
-        selected_row.loc[0, 'Evening Study End Time']
-    ]
-})
+# Plot
+fig = px.bar(filtered_data, x='Hour', y='MinutesWatched', color='YearOfStudy',
+             labels={'Hour': 'Hour of the Day', 'MinutesWatched': 'Minutes Watched'},
+             title=f'Study/Watch Patterns - {year_of_study}')
 
-# Plotting
-fig = px.line(plot_data, x='Hour', y='Event', title=f'Study Times for {selected_year}',
-              markers=True)
-
-# Show plot
+# Display the plot
 st.plotly_chart(fig)
+
 
 # Updated sample data to include specific times for First Year
 data5 = {
