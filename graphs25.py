@@ -47,14 +47,16 @@ df_sorted = df.sort_values(by='YOA')
 # Plot a bar chart
 fig = px.line(df_sorted, x='YOA', y='Video Count')
 st.title('📊 Distinct Count of Video Titles by YOA')
-st.markdown(' This graph represents the total number of videos watched by users, distributed year-wise. 
+st.markdown(' This graph represents the total number of videos watched by users, distributed year-wise.')
+
+st.markdown("""
 - First Year Students: Total of 1129 videos watched.
 - Second Year Students: Total of 1299 videos watched. 
 - Third year students: Total of 1709 videos watched.
 - Fourth year students: Total of 1714 videos watched.
 - Final year students: Total of 2489 videos watched.
 - Internship students: Total of 1692 videos watched. 
-- Doctors: Total of 2956 videos watched.    ')
+- Doctors: Total of 2956 videos watched.    """)
 
             
 st.plotly_chart(fig)
