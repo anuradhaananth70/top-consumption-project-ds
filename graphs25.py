@@ -110,9 +110,6 @@ average_completion_time = {
     'Endocrinology' : 14.8,
     'ENT' : 46.8,
     'Forensic Medicine' : 27,
-    'Gastroenterology' : 10.75,
-    'Gastrointestinal System' : 1,
-    'Haematology' : 13.5,
     'Medicine' : 166.9,
     'Microbiology' : 57.7,
     'Neurology' : 8,
@@ -307,7 +304,7 @@ st.sidebar.markdown("""
 #pie chart
 import matplotlib.pyplot as plt
 import streamlit as st
-
+st.title('Pie Chart To Check Distribution of Other Content Accessed')
 # Sample data
 labels = ['QBank Usage', 'Notes', 'Video Usage', 'Others']
 sizes = [14, 34, 42, 10]
@@ -338,28 +335,14 @@ import pandas as pd
 # Sample data
 data4 = {
     'Subject Name': ['Anaesthesia', 'Anatomy', 'Biochemistry', 'Cardiology', 'Community Medicine', 'COVID-19 Updates', 'Delta MCQ Discussion', 'Delta Recent Updates', 'Delta: MCQ Discussion videos', 'Dermatology', 'E6 MCQ Discussion', 'E6 Revision Videos', 'E6.5 Revision Videos', 'Endocrinology', 'ENT', 'Forensic Medicine', 'Gastroenterology', 'Gastrointestinal System', 'Haematology', 'Integrated Sessions', 'Marrow Live +', 'Marrow Revision Videos', 'Medicine', 'Microbiology', 'Nephrology', 'Neurology', 'Obstetrics & Gynaecology', 'Ophthalmology', 'Orthopaedics', 'Paediatrics', 'Pathology', 'Pharmacology', 'Physiology', 'Psychiatry', 'Pulmonology', 'Radiology', 'Rheumatology & Immunology', 'Surgery'],
-    'Average Time Taken to Finish the Subject': [21.5, 71.1, 45.9, 16.2, 78.6, 5, 19, 7.6, 8.6, 22.7, 20.8, 32.3, 65.5, 14.8, 46.8, 27.0, 10.75, 1, 13.5, 2, 1, 27.6, 166.9, 57.7, 15.5, 8, 79.5, 29.4, 20.8, 42.0, 56.1, 56.2, 45.2, 13.48, 14.5, 29.9375, 9.875, 58.0]
+    'Average Days Taken to Finish the Subject': [21.5, 71.1, 45.9, 16.2, 78.6, 5, 19, 7.6, 8.6, 22.7, 20.8, 32.3, 65.5, 14.8, 46.8, 27.0, 10.75, 1, 13.5, 2, 1, 27.6, 166.9, 57.7, 15.5, 8, 79.5, 29.4, 20.8, 42.0, 56.1, 56.2, 45.2, 13.48, 14.5, 29.9375, 9.875, 58.0]
 }
 
 # Create a DataFrame
 df4 = pd.DataFrame(data4)
 
-# Set a background image
-background_image_path = "photos/marrowlogo.png"
-st.markdown(
-    f"""
-    <style>
-        .reportview-container {{
-            background: url({background_image_path}) no-repeat center center fixed;
-            background-size: cover;
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Display the title as a markdown string
-st.markdown("### 🕓 Average time taken by a student to finish a subject from a pool of high consumption users")
+st.markdown("### 🕓 Average days taken by a student to finish a subject from a pool of high consumption users")
 
 # Display the DataFrame as a table
 st.table(df4)
@@ -444,6 +427,8 @@ Based on the analysis of the study patterns of the students, several key insight
 #### **♟️ Insights from a security perspective**:
 
  The total number of titles can help us understand in what pace the user is completing the subjects. When we include the average seek and pause, we get a clear picture of how the videos are being used. The second step would be to check if the user is present in our daily monitoring list, if yes, then we can mark the user for suspicion.
+ One of the users from the top consumption is also found in our suspicious users list. We were able to confirm that this particular dashboard is being 
+ effective because the user had completed an entire subject in a very less time span. For example, when we checked for 'Surgery', the user is found to have completed '71' videos in a span of 8 days. Which is abnormal and highly suspicious.  
 
 
 In conclusion, the study pattern analysis of the students reveals a consistent trend of heavy usage during specific periods of the year, a preference for certain subjects, and a balanced approach to learning through videos and QBanks.
