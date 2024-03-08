@@ -27,19 +27,24 @@ are from first year of MBBS till they graduate to become a Doctor. In YOA analys
 
 - The maximum usage comes from Doctors who are not students currently. First year student however are found to have video usage on almost all popular subjects like OBG, ENT, etc. and an ample about of QBanks.
 """)
-# Add a background image for the entire app
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-    .stApp {
-    background-image: url("photos/white.jpeg");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
 
+
+# Function to set a background image
+def add_bg_image():
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("photos/white.jpeg");
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# Call the function to set the background image
+add_bg_image()
 
 
 
