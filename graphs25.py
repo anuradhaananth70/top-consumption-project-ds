@@ -201,8 +201,8 @@ st.markdown('--------------------------------------------')
 # Updated sample data to include specific times for First Year
 data5 = {
     'Academic Year': ['First Year', 'Second Year', 'Third Year', 'Fourth Year', 'Final Year', 'Internship', 'Doctor'],
-    'Anatomy': [36, 47, 6, 11, 48, 9, 151],  # Assuming placeholders for other years
-    'Biochemistry': [59, 67, 9, 12, 141, 121, 353],  # Assuming placeholders for other years
+    'Anatomy': [36, 47, 6, 11, 48, 9, 51],  # Assuming placeholders for other years
+    'Biochemistry': [59, 67, 9, 12, 141, 121, 53],  # Assuming placeholders for other years
     'OBG': [2, 8, 19, 35, 158, 127, 169],  # Assuming placeholders for other years
     'ENT': [1, 8, 23, 63, 213, 244, 519],  # Assuming placeholders for other years
     'Medicine': [2, 7, 45, 243, 123, 624, 419],  # Assuming placeholders for other years
